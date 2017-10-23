@@ -32,7 +32,8 @@ gulp.task('js', ['template'], function () {
     gulp.src([
         'node_modules/angular/angular.min.js',
         'dist/templates.js',
-        'src/**/*.js'
+        'src/**/*.js',
+        '!src/**/*.spec.js'
     ])
         .pipe(uglify())
         .pipe(jshint())

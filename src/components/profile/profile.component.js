@@ -4,11 +4,11 @@
         .module('profile',[])
         .component('profile', {
             templateUrl:'components/profile/profile.template.html',
-            controller: ControllerController
+            controller: profileCtrl
         });
 
-    ControllerController.$inject = [];
-    function ControllerController() {
+        profileCtrl.$inject = [];
+    function profileCtrl() {
         var $ctrl = this;
     }
 })();
