@@ -1,14 +1,18 @@
-(function() {
+(function () {
     'use strict';
     angular
-        .module('profile',[])
+        .module('profile', [])
         .component('profile', {
-            templateUrl:'components/profile/profile.template.html',
-            controller: ControllerController
+            templateUrl: 'components/profile/profile.template.html',
+            controller: profileCtrl,
+            bindings: {
+                firstname: '@',
+                lastname: '@'
+            }
         });
 
-    ControllerController.$inject = [];
-    function ControllerController() {
+    profileCtrl.$inject = [];
+    function profileCtrl() {
         var $ctrl = this;
     }
 })();

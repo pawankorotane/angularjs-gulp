@@ -1,20 +1,19 @@
-(function() {
+(function () {
     'use strict';
     angular
         .module('hello-world', ['profile'])
         .component('helloWorld', {
-            templateUrl : 'components/hello-world/hello-world.template.html',
-            controller: ControllerController,
+            templateUrl: 'components/hello-world/hello-world.template.html',
+            controller: helloWorldCtrl,
         });
 
 
-    ControllerController.$inject = [];
-    function ControllerController() {
+    helloWorldCtrl.$inject = [];
+    function helloWorldCtrl() {
         var $ctrl = this;
-
-        $ctrl.$onInit = function() { };
-        $ctrl.$onChanges = function(changesObj) { };
-        $ctrl.$onDestroy = function() { };
+        $ctrl.getGreetings =  function(){
+            return 'Hello World';
+        }
     }
 })();
 
